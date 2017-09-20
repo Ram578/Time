@@ -1,0 +1,328 @@
+-- phpMyAdmin SQL Dump
+-- version 4.1.4
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Aug 12, 2017 at 04:52 PM
+-- Server version: 5.6.15-log
+-- PHP Version: 5.4.24
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `pitch_discrimination`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `aims_answers`
+--
+
+CREATE TABLE IF NOT EXISTS `aims_answers` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `questionid` int(11) NOT NULL,
+  `optionid` int(11) NOT NULL,
+  `addeddate` datetime DEFAULT NULL,
+  `active` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `questionid` (`questionid`),
+  KEY `optionid` (`optionid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `aims_certile`
+--
+
+CREATE TABLE IF NOT EXISTS `aims_certile` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `score` int(5) NOT NULL,
+  `certile` int(5) NOT NULL,
+  `createddate` datetime NOT NULL,
+  `updatedate` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=58 ;
+
+--
+-- Dumping data for table `aims_certile`
+--
+
+INSERT INTO `aims_certile` (`id`, `score`, `certile`, `createddate`, `updatedate`) VALUES
+(1, 0, 5, '2016-08-17 21:24:45', '2016-08-17 21:24:49'),
+(2, 1, 5, '2016-08-17 21:25:05', '2016-08-17 21:25:09'),
+(3, 2, 5, '2016-08-17 21:25:24', '2016-08-17 21:25:27'),
+(4, 3, 5, '2016-08-17 21:25:40', '2016-08-17 21:25:44'),
+(5, 4, 5, '2016-08-17 21:36:57', '2016-08-17 21:37:00'),
+(6, 6, 5, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(7, 7, 5, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(8, 7, 5, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(9, 8, 5, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(11, 9, 5, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(13, 10, 5, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(14, 11, 5, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(17, 12, 5, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(18, 13, 5, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(20, 14, 5, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(22, 15, 6, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(26, 16, 8, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(27, 17, 10, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(28, 18, 14, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(30, 19, 17, '2016-08-19 00:00:00', '2016-08-12 00:00:00'),
+(31, 19, 17, '2016-08-19 00:00:00', '2016-08-12 00:00:00'),
+(32, 20, 20, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(34, 21, 25, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(37, 22, 30, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(38, 23, 35, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(39, 22, 35, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(40, 23, 35, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(41, 23, 35, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(42, 16, 8, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(43, 22, 30, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(44, 22, 35, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(45, 23, 35, '2016-08-19 00:00:00', '2016-08-12 00:00:00'),
+(46, 24, 40, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(47, 25, 45, '2016-08-19 00:00:00', '2016-08-12 00:00:00'),
+(48, 26, 50, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(49, 27, 56, '2016-08-19 00:00:00', '2016-08-12 00:00:00'),
+(50, 28, 62, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(51, 29, 68, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(52, 30, 75, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(53, 31, 81, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(54, 32, 87, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(55, 33, 91, '2016-08-19 00:00:00', '2016-08-12 00:00:00'),
+(56, 34, 96, '2016-08-19 00:00:00', '2016-08-19 00:00:00'),
+(57, 35, 97, '2016-08-19 00:00:00', '2016-08-19 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `aims_question_options`
+--
+
+CREATE TABLE IF NOT EXISTS `aims_question_options` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `questionid` int(11) NOT NULL,
+  `option` varchar(255) NOT NULL,
+  `option_path` varchar(255) NOT NULL,
+  `addeddate` datetime DEFAULT NULL,
+  `active` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `questionid` (`questionid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ci_sessions`
+--
+
+CREATE TABLE IF NOT EXISTS `ci_sessions` (
+  `id` varchar(40) NOT NULL,
+  `ip_address` varchar(45) NOT NULL,
+  `timestamp` int(10) unsigned NOT NULL DEFAULT '0',
+  `data` blob NOT NULL,
+  KEY `ci_sessions_timestamp` (`timestamp`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `ci_sessions`
+--
+
+INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
+('d8c0c6406d97a6f4c5cfaaaf877d3e3dfee4c743', '127.0.0.1', 1502537397, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530323533373133353b557365724e616d657c733a373a22546861746f6e65223b4c6173744e616d657c733a353a22506978656c223b47656e6465727c733a363a2246656d616c65223b5573657249447c693a313b),
+('b6ecab57cd837afbf01643e0ad4c1c16553c0698', '127.0.0.1', 1502538708, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530323533383431363b557365724e616d657c733a373a22546861746f6e65223b4c6173744e616d657c733a353a22506978656c223b47656e6465727c733a363a2246656d616c65223b5573657249447c693a313b),
+('8326cca91d33c3255a6fed9e1196cd96cb92c561', '127.0.0.1', 1502539046, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530323533383738313b557365724e616d657c733a373a22546861746f6e65223b4c6173744e616d657c733a353a22506978656c223b47656e6465727c733a363a2246656d616c65223b5573657249447c693a313b),
+('bc5e2f5dba1f7ae6571f2ac904a68abffedae438', '127.0.0.1', 1502539497, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530323533393134363b557365724e616d657c733a373a22546861746f6e65223b4c6173744e616d657c733a353a22506978656c223b47656e6465727c733a363a2246656d616c65223b5573657249447c693a313b),
+('a7d1facca9c69bf26aaf54fe6df2a3b1f63d1832', '127.0.0.1', 1502539525, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530323533393530303b557365724e616d657c733a373a22546861746f6e65223b4c6173744e616d657c733a353a22506978656c223b47656e6465727c733a363a2246656d616c65223b5573657249447c693a313b),
+('0ed09c3b376b1612f972564d68be12dfa4651373', '127.0.0.1', 1502539831, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530323533393534313b557365724e616d657c733a373a22546861746f6e65223b4c6173744e616d657c733a353a22506978656c223b47656e6465727c733a363a2246656d616c65223b5573657249447c733a313a2231223b),
+('8455ffc7444b51271efab11871f0c7b36931e732', '127.0.0.1', 1502540138, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530323533393936303b557365724e616d657c733a373a22546861746f6e65223b4c6173744e616d657c733a353a22506978656c223b47656e6465727c733a363a2246656d616c65223b5573657249447c733a313a2231223b456d706c6f79656549447c733a313a2234223b456d706c6f796565464e616d657c733a333a22646576223b456d706c6f7965654c4e616d657c733a343a2274657374223b456d706c6f796565526f6c657c733a353a2261646d696e223b),
+('2d55fcbe84cd0a968b2498acd44dca8ecfe0b7c7', '127.0.0.1', 1502540655, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530323534303437393b557365724e616d657c733a373a22546861746f6e65223b4c6173744e616d657c733a353a22506978656c223b47656e6465727c733a363a2246656d616c65223b5573657249447c733a313a2231223b456d706c6f79656549447c733a313a2234223b456d706c6f796565464e616d657c733a333a22646576223b456d706c6f7965654c4e616d657c733a343a2274657374223b456d706c6f796565526f6c657c733a353a2261646d696e223b),
+('ec6dc762426bd270eae7afb5ee08e03a336c9733', '127.0.0.1', 1502541184, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530323534313136393b557365724e616d657c733a373a22546861746f6e65223b4c6173744e616d657c733a353a22506978656c223b47656e6465727c733a363a2246656d616c65223b5573657249447c733a313a2231223b456d706c6f79656549447c733a313a2234223b456d706c6f796565464e616d657c733a333a22646576223b456d706c6f7965654c4e616d657c733a343a2274657374223b456d706c6f796565526f6c657c733a353a2261646d696e223b),
+('ac9bf1ab08dc24de82781104258e349ee229300e', '127.0.0.1', 1502542024, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530323534323031383b557365724e616d657c733a373a22546861746f6e65223b4c6173744e616d657c733a353a22506978656c223b47656e6465727c733a363a2246656d616c65223b5573657249447c733a313a2231223b456d706c6f79656549447c733a313a2234223b456d706c6f796565464e616d657c733a333a22646576223b456d706c6f7965654c4e616d657c733a343a2274657374223b456d706c6f796565526f6c657c733a353a2261646d696e223b),
+('eb08b3e96d2b69eeb0e5b6cc9e28e3ab191a085e', '127.0.0.1', 1502542586, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530323534323338343b557365724e616d657c733a373a22546861746f6e65223b4c6173744e616d657c733a353a22506978656c223b47656e6465727c733a363a2246656d616c65223b5573657249447c733a313a2231223b456d706c6f79656549447c733a313a2234223b456d706c6f796565464e616d657c733a333a22646576223b456d706c6f7965654c4e616d657c733a343a2274657374223b456d706c6f796565526f6c657c733a353a2261646d696e223b),
+('4aae961e84e4b771754b711f9afc8e950608166c', '127.0.0.1', 1502542748, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530323534323631393b),
+('c3c11082ddbd597afc23d48326f67520facbdf01', '127.0.0.1', 1502543478, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530323534333133373b557365724e616d657c733a373a22546861746f6e65223b4c6173744e616d657c733a353a22506978656c223b47656e6465727c733a363a2246656d616c65223b5573657249447c733a313a2231223b),
+('f89c1f2e18303dcb23564fbb650b277f8cc0ffc0', '127.0.0.1', 1502543858, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530323534333438343b557365724e616d657c733a373a22546861746f6e65223b4c6173744e616d657c733a353a22506978656c223b47656e6465727c733a363a2246656d616c65223b5573657249447c733a313a2231223b),
+('b5620cd91c8f8f2cd48accc0ca2ca5dce916da85', '127.0.0.1', 1502544278, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530323534333936313b557365724e616d657c733a373a22546861746f6e65223b4c6173744e616d657c733a353a22506978656c223b47656e6465727c733a363a2246656d616c65223b5573657249447c733a313a2231223b),
+('b91c6a8c4ed1bfb745ec456c842b2a56ca58906f', '127.0.0.1', 1502546576, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530323534343330363b557365724e616d657c733a373a22546861746f6e65223b4c6173744e616d657c733a353a22506978656c223b47656e6465727c733a363a2246656d616c65223b5573657249447c733a313a2231223b),
+('0b8578259dcbbc6b2b87402143d3d6e6a7982ebd', '127.0.0.1', 1502546593, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530323534363538303b557365724e616d657c733a373a22546861746f6e65223b4c6173744e616d657c733a353a22506978656c223b47656e6465727c733a363a2246656d616c65223b5573657249447c733a313a2231223b),
+('4033f9cc32e24ffa888483f6845ac45f24ad7c22', '127.0.0.1', 1502549096, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530323534393039353b),
+('fcf760dcadb294580cdcac4fd626c75eb3ed25d8', '127.0.0.1', 1502549235, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530323534393135373b557365724e616d657c733a373a22546861746f6e65223b4c6173744e616d657c733a353a22506978656c223b47656e6465727c733a363a2246656d616c65223b5573657249447c733a313a2231223b);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pitch_certile_scores`
+--
+
+CREATE TABLE IF NOT EXISTS `pitch_certile_scores` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `age` varchar(8) NOT NULL,
+  `gender` varchar(6) NOT NULL,
+  `score` varchar(8) NOT NULL,
+  `certile` int(5) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pitch_employees`
+--
+
+CREATE TABLE IF NOT EXISTS `pitch_employees` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(25) NOT NULL,
+  `lastname` varchar(25) NOT NULL,
+  `username` varchar(25) NOT NULL,
+  `passwd` varchar(50) NOT NULL,
+  `avathar` varchar(100) DEFAULT NULL,
+  `addeddate` datetime DEFAULT NULL,
+  `role` varchar(5) NOT NULL,
+  `active` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `pitch_employees`
+--
+
+INSERT INTO `pitch_employees` (`id`, `firstname`, `lastname`, `username`, `passwd`, `avathar`, `addeddate`, `role`, `active`) VALUES
+(3, 'aims', 'admin', 'aimadmin', '534bd18ed33f9386e42a3f33cad6dcc3', NULL, '2016-08-20 00:00:00', '', 1),
+(4, 'dev', 'test', 'devtest', '90578217a199f05f32833d8ced80fb2e', 'NULL', '2016-08-20 00:00:00', 'admin', 1),
+(5, 'test', 'dev', 'testdev', '90578217a199f05f32833d8ced80fb2e', 'NULL', '2016-08-20 00:00:00', 'staff', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pitch_questions`
+--
+
+CREATE TABLE IF NOT EXISTS `pitch_questions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `questioncode` varchar(15) NOT NULL,
+  `questionname` varchar(100) DEFAULT NULL,
+  `questiondesc` varchar(255) DEFAULT NULL,
+  `questiontype` varchar(8) NOT NULL,
+  `audiopath` varchar(255) NOT NULL,
+  `audiofilename` varchar(100) NOT NULL,
+  `answer` int(2) NOT NULL,
+  `active` tinyint(1) DEFAULT '1',
+  `addeddate` datetime DEFAULT NULL,
+  `includeinscoring` tinyint(1) DEFAULT '1',
+  `show_or_hide` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `questioncode` (`questioncode`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+
+--
+-- Dumping data for table `pitch_questions`
+--
+
+INSERT INTO `pitch_questions` (`id`, `questioncode`, `questionname`, `questiondesc`, `questiontype`, `audiopath`, `audiofilename`, `answer`, `active`, `addeddate`, `includeinscoring`, `show_or_hide`) VALUES
+(1, 'Practice Item1', NULL, NULL, 'practice', 'uploads/20170812/20170812122644.mp3', '20170812122644.mp3', 2, 1, '2017-08-12 12:08:44', 1, 1),
+(2, 'Practice Item2', NULL, NULL, 'practice', 'uploads/20170812/20170812122708.mp3', '20170812122708.mp3', 1, 1, '2017-08-12 12:08:08', 1, 1),
+(3, 'Example 1', NULL, NULL, 'practice', 'uploads/20170812/20170812122730.mp3', '20170812122730.mp3', 2, 1, '2017-08-12 12:08:30', 1, 1),
+(4, 'Example 2', NULL, NULL, 'practice', 'uploads/20170812/20170812122750.mp3', '20170812122750.mp3', 2, 1, '2017-08-12 12:08:50', 1, 1),
+(5, 'Practice Item 1', NULL, NULL, 'practice', 'uploads/20170812/20170812122834.mp3', '20170812122834.mp3', 1, 1, '2017-08-12 12:08:34', 1, 1),
+(6, 'Practice Item 2', NULL, NULL, 'practice', 'uploads/20170812/20170812122902.mp3', '20170812122902.mp3', 2, 1, '2017-08-12 12:08:02', 1, 1),
+(7, 'Practice Item 3', NULL, NULL, 'practice', 'uploads/20170812/20170812122942.mp3', '20170812122942.mp3', 2, 1, '2017-08-12 12:08:42', 1, 1),
+(8, 'Item Code 1', NULL, NULL, 'test', 'uploads/20170812/20170812124738.wav', '20170812124738.wav', 1, 1, '2017-08-12 12:08:38', 1, 1),
+(9, 'Item Code 2', NULL, NULL, 'test', 'uploads/20170812/20170812124754.wav', '20170812124754.wav', 2, 1, '2017-08-12 12:08:54', 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pitch_questions_order`
+--
+
+CREATE TABLE IF NOT EXISTS `pitch_questions_order` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `question_order` varchar(8000) NOT NULL,
+  `type` varchar(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pitch_users`
+--
+
+CREATE TABLE IF NOT EXISTS `pitch_users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(30) NOT NULL,
+  `lastname` varchar(30) NOT NULL,
+  `age` varchar(6) DEFAULT NULL,
+  `gender` varchar(6) NOT NULL,
+  `filenumber` varchar(30) NOT NULL,
+  `addeddate` datetime NOT NULL,
+  `completeddate` datetime NOT NULL,
+  `active` tinyint(1) DEFAULT '1',
+  `status` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `filenumber` (`filenumber`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `pitch_users`
+--
+
+INSERT INTO `pitch_users` (`id`, `firstname`, `lastname`, `age`, `gender`, `filenumber`, `addeddate`, `completeddate`, `active`, `status`) VALUES
+(1, 'Thatone', 'Pixel', '24', 'Female', '103B-D-2017-1', '2017-08-12 12:08:20', '0000-00-00 00:00:00', 1, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pitch_user_answers`
+--
+
+CREATE TABLE IF NOT EXISTS `pitch_user_answers` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `userid` int(11) NOT NULL,
+  `questionid` int(11) NOT NULL,
+  `optionid` int(11) NOT NULL,
+  `addeddate` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `userid` (`userid`),
+  KEY `questionid` (`questionid`),
+  KEY `optionid` (`optionid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `aims_answers`
+--
+ALTER TABLE `aims_answers`
+  ADD CONSTRAINT `aims_answers_ibfk_1` FOREIGN KEY (`questionid`) REFERENCES `pitch_questions` (`id`),
+  ADD CONSTRAINT `aims_answers_ibfk_2` FOREIGN KEY (`optionid`) REFERENCES `aims_question_options` (`id`);
+
+--
+-- Constraints for table `aims_question_options`
+--
+ALTER TABLE `aims_question_options`
+  ADD CONSTRAINT `aims_question_options_ibfk_1` FOREIGN KEY (`questionid`) REFERENCES `pitch_questions` (`id`);
+
+--
+-- Constraints for table `pitch_user_answers`
+--
+ALTER TABLE `pitch_user_answers`
+  ADD CONSTRAINT `pitch_user_answers_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `pitch_users` (`id`),
+  ADD CONSTRAINT `pitch_user_answers_ibfk_2` FOREIGN KEY (`questionid`) REFERENCES `pitch_questions` (`id`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
