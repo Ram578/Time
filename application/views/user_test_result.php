@@ -104,14 +104,14 @@
 									<table width="100%" cellspacing="0" cellpadding="0" class="table table-bordered">
 										<tr>
 											<td width="10%">Practice Responses</td>
-											<!-- Check the user status -->
+											<!-- Check the user time_status -->
 											<?php 
-												if($value['status'] == 1) :
+												if($value['time_status'] == 1) :
 													
 											?>
 											<td width="2.3%">Next</td>
 											<?php
-												elseif($value['status'] == 2) :
+												elseif($value['time_status'] == 2) :
 											?>
 												
 											<td width="2.3%">More Examples</td>
@@ -121,7 +121,7 @@
 											</td>
 											
 											<?php
-												if($value['status'] == 1) :
+												if($value['time_status'] == 1) :
 													for($intCtr = 0; $intCtr< sizeof($value['practice_result']); $intCtr++) :
 											?>
 													<td width="2.3%"><?=$value['practice_result'][$intCtr]['optionid'];?></td>
@@ -132,7 +132,7 @@
 													<td width="2.3%">0</td>
 											<?php
 													endfor;
-												elseif($value['status'] == 2) :
+												elseif($value['time_status'] == 2) :
 													for($i=0;$i<2;$i++) :
 												?>
 													<td width="2.3%">0</td>

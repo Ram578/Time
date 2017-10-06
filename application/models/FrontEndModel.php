@@ -142,7 +142,7 @@ class Frontendmodel extends CI_Model
 		}
 		
 		$this->db->where('id', $user_id);
-		$result = $this->db->update('users', array('status' => $status_code));
+		$result = $this->db->update('users', array('time_status' => $status_code));
 		
 		return $result;
 	}
@@ -159,7 +159,7 @@ class Frontendmodel extends CI_Model
 			$timestamp = time();
 			$date_format = date("Y-m-d H:i:s", $timestamp);
 			$this->db->where('id', $user_id);
-			$this->db->update('users', array('completeddate' => $date_format));
+			$this->db->update('users', array('time_completed_date' => $date_format));
 		} 
 	}
 }

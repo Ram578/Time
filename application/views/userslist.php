@@ -62,7 +62,7 @@
 									<td><?=$user['gender'];?></td>
 									<td><?=$user['filenumber'];?></td>
 									<td><?=$user['addeddate'];?></td>
-									<td><?=$user['completeddate'];?></td>
+									<td><?=$user['time_completed_date'];?></td>
 									<td><?=$user['score'];?></td>
 									<td><?=$user['certile'];?></td>
 								</tr>

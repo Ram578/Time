@@ -18,7 +18,7 @@ class Adminmodel extends CI_Model
 
 			$strPassword = md5($_POST['password']);
 
-			$strQuery = 'SELECT * FROM time_employees WHERE username LIKE "'.$strUserName.'"';
+			$strQuery = 'SELECT * FROM employees WHERE username LIKE "'.$strUserName.'"';
 
 			$objQuery = $this->db->query($strQuery);
 
