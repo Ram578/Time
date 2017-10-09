@@ -224,7 +224,7 @@ input.radiobtn-custom-green[type='radio'] {
 	display: none; 
 }
 input.radiobtn-custom-green[type='radio'] + label {
-	background-color: #FA8072;
+	background-color: #bbadab;
 	margin-top:-7px;
 	display: inline-block; 
 	color:#fff;
@@ -376,4 +376,10 @@ span.score {
    -webkit-animation-name: morning;
     -webkit-animation-iteration-count: 30;
    float: left;
+}
+#lbl_1 {
+	border-radius:60%;
+}
+#lbl_2 {
+	border-radius:60%;
 }

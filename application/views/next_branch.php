@@ -29,7 +29,7 @@
 							</div>
 							<div class="option-view">
 								<input data-role-id="<?=$question['id'];?>" data-role-option="2" id="id_2" type="radio" name="SelectOption" class="radiobtn-custom-green custom-radio-button" />
-								<label id="lbl_2" for="id_2" class="btn-green">Shorter</label>
+								<label id="lbl_2" for="id_2" class="btn-green">shorter</label>
 							</div>
 						</div>
 					</div>

@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Moreinfo extends CI_Controller {	
 	/**
-	 * This is More info page controller.
+	 * This is Moreinfo page controller.
 	 */ 
 
 	public function index()
