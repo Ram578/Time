@@ -4,7 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Uploadquestions extends CI_Controller {
 
 	/**
-	 * This is Uploadquestions page controller.
+	 * This is NewExampleInfo page controller.
+	 * Develope on 19th July'2016 by Hemanth Kumar
 	 */
 	public function index()
 	{

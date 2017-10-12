@@ -4,7 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Admindashboard extends CI_Controller {
 
 	/**
-	 * This is Admindashboard page controller.
+	 * This is TonalTest page controller.
+	 * Develope on 21th July'2016 by Hemanth Kumar
 	 */
 	public function index()
 	{

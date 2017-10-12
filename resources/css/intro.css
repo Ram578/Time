@@ -224,7 +224,7 @@ input.radiobtn-custom-green[type='radio'] {
 	display: none; 
 }
 input.radiobtn-custom-green[type='radio'] + label {
-	background-color: #bbadab;
+	background-color: #FA8072;
 	margin-top:-7px;
 	display: inline-block; 
 	color:#fff;

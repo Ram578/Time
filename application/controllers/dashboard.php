@@ -1,10 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Dashboard extends CI_Controller {
+class NewExample extends CI_Controller {
 
 	/**
-	 * This is Dashboard page controller.
+	 * This is NewExample page controller.
+	 * Develope on 19th July'2016 by Hemanth Kumar
 	 */
 	public function index()
 	{

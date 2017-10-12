@@ -4,6 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Home extends CI_Controller {	
 	/**
 	 * This is Home page controller.
+	 * Develope on 19th July'2016 by Hemanth Kumar
+	 * Modified on 24th.
 	 */ 
 
 	public function index()
