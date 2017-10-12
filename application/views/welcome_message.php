@@ -15,8 +15,8 @@
 						<img src="resources/img/introduction/1.jpg" alt="" title="" />
 					</div>
 					<!-- When the page loads the fourth screen will display this div -->
-					<div class="content" id="divs" style="display:none;">
-						<div class="one" style="padding-top: 1em;">
+					<div class="content" id="divs" style="display:none; height:100%;">
+						<div class="one" style="padding-top: 1em; padding-bottom:8em;">
 							 <div class="row" style="margin-top:10%;">
 								<div class="col-sm-4 col-md-offset-4 animate " id="demoa" style="width:3%;"></div>
 							 </div>
