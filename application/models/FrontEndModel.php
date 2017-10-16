@@ -1,7 +1,6 @@
 <?php
 /**
 * This class is used to handle the customer related info.
-* Develope on 19th July'2016 by Hemanth Kumar
 */
 class Frontendmodel extends CI_Model
 {

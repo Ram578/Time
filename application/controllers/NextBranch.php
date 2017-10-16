@@ -4,8 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Nextbranch extends CI_Controller {
 
 	/**
-	 * This is NextBranch page controller.
-	 * Develope on 19th July'2016 by Hemanth Kumar
+	 * This is Nextbranch page controller.
 	 */
 	public function index()
 	{

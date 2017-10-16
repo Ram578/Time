@@ -20,8 +20,8 @@
 		var innerHTML = "<source src='audio/introduction/1.mp3'></source>";
 		ctrlaudio.InnerHtml = innerHTML;
 		//ctrlcount.InnerHtml = innerHTML;
-		hdTuneNames = "audio/introduction/1.mp3" + "," + "audio/introduction/2.mp3" + "," + "audio/introduction/3.mp3" + "," + "audio/introduction/1.mp3" + "," + "audio/introduction/5.mp3" + "," + "audio/introduction/6.mp3" + "," + "audio/introduction/7.mp3";
-		hdImgNames = "img/introduction/1.jpg" + "," + "img/introduction/2.jpg" + "," + "img/introduction/3.jpg" + "," + "img/" + "," + "img/introduction/5.jpg" + "," + "img/introduction/6.jpg" + "," + "img/introduction/7.jpg";
+		hdTuneNames = "audio/introduction/1.mp3" + "," + "audio/introduction/2.mp3" + "," + "audio/introduction/3.mp3" + "," + "audio/introduction/4.mp3" + "," + "audio/introduction/5.mp3" + "," + "audio/introduction/6.mp3" + "," + "audio/introduction/7.mp3" + "," + "audio/introduction/8.mp3" + "," + "audio/introduction/9.mp3" + "," + "audio/introduction/10.mp3";
+		hdImgNames = "img/introduction/1.jpg" + "," + "img/introduction/2.jpg" + "," + "img/introduction/3.jpg" + "," + "img/" + "," + "img/introduction/5.jpg" + "," + "img/introduction/6.jpg" + "," + "img/introduction/7.jpg" + "," + "img/introduction/8.jpg"  + "," + "img/introduction/9.jpg"  + "," + "img/introduction/10.jpg";
 		
 		$(function () {
 		 //Find the audio control on the page
