@@ -38,10 +38,12 @@ class Userslist extends CI_Controller {
 
 		$arrData['Users'] = $this->adminmodel->FetchUsers();
 		
+		$arrTemp = array();
+		
 		foreach ($arrData['Users'] as $key => &$value) 
 		{
 			$intScore = $this->adminmodel->FetchUserResult($value['id']);
-			
+			$value['status'] = $value['time_status'];
 			// Check the Status & then assign the value
 			if($value['status'] == 1) 
 			{
@@ -59,6 +61,14 @@ class Userslist extends CI_Controller {
 			$value['score'] = $intScore;
 
 			$value['certile'] = $this->adminmodel->FetchCertileWRT($intScore, $value['age'], $value['gender']);
+			
+			$arrTempRow = $value;
+			unset($arrTempRow['pitch_completed_date']);
+			unset($arrTempRow['tonal_completed_date']);
+			unset($arrTempRow['pitch_status']);
+			unset($arrTempRow['time_status']);
+			unset($arrTempRow['tonal_status']);
+			$arrTemp[] = $arrTempRow;
 		}
 		
 		// Enable to download this file
@@ -72,8 +82,9 @@ class Userslist extends CI_Controller {
         $arrHeaders = array('ID', 'First Name', 'Last Name', 'Age', 'Gender', 'File Number', 'Created Date', 'Completed Date', 'Active', 'Status', 'Score', 'Certile');
         
         fputcsv($display, array_values($arrHeaders), ",", '"');
-       
-		$users = $arrData['Users'];
+		
+		$users = $arrTemp;
+		// $users = $arrData['Users'];
 		
 		if(isset($users))    
 		{

@@ -233,15 +233,6 @@ class Adminmodel extends CI_Model
 
 		return $intCounter;
 	}
-
-	function FetchCertile()
-	{
-		$strQuery = 'SELECT * FROM aims_certile ORDER BY id DESC';
-
-		$objQuery = $this->db->query($strQuery);
-
-		return $objQuery->result_array();
-	}
 	
 	//Get the certile score based on user age, gender and score from time_certile_scores table in db
 	function FetchCertileWRT($p_intScore, $age , $gender)
@@ -276,7 +267,6 @@ class Adminmodel extends CI_Model
 
 	function _userResults($id_user)
 	{
-		
 		$strQuery = 'SELECT ua.`questionid`, ua.`optionid`, q.`answer`, q.includeinscoring FROM time_user_answers ua INNER JOIN time_questions q ON q.id = ua.`questionid` WHERE q.questiontype = "test" AND userid = '.$id_user.' ORDER BY q.serial_number';
 
 		$objQuery = $this->db->query($strQuery);
@@ -744,7 +734,7 @@ class Adminmodel extends CI_Model
 			return false;
 		}
 	}
-	// deleteing add subscore row in subscore table
+	// deleting add subscore row in subscore table
 	function delete_subscore_row()
 	{
 		$id = $_POST['id'];

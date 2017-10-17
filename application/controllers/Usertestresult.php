@@ -20,9 +20,6 @@ class Usertestresult extends CI_Controller {
 
 			$value['certile'] = $this->adminmodel->FetchCertileWRT($intScore, $value['age'], $value['gender']);
 		}
-		
-		// print_r($arrData);
-		// die;
 
 		$this->load->view('user_test_result', $arrData);
 	}
@@ -35,10 +32,20 @@ class Usertestresult extends CI_Controller {
 
 		$arrTemp = array();
 
-		$arrHeaders = array('ID', 'First Name', 'Last Name', 'Age', 'Gender', 'File Number', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7');
+		$arrHeaders = array('ID', 'First Name', 'Last Name', 'Age', 'Gender', 'File Number', 'Score', 'Certile', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7');
+		
+		foreach ($arrResult as $key => &$value) 
+		{
+			$intScore = $this->adminmodel->FetchUserResult($value['id']);
+
+			$value['score'] = $intScore;
+
+			$value['certile'] = $this->adminmodel->FetchCertileWRT($intScore, $value['age'], $value['gender']);
+		}
 
 		foreach ($arrResult as $key => &$value) 
 		{
+			$value['status'] = $value['time_status'];
 			if(count($value['practice_result']) > 0)
 			{
 				if($value['status'] == 1) {
@@ -85,8 +92,13 @@ class Usertestresult extends CI_Controller {
 			unset($arrTempRow['practice_result']);
 			unset($arrTempRow['active']);
 			unset($arrTempRow['addeddate']);
-			unset($arrTempRow['completeddate']);
+			unset($arrTempRow['pitch_completed_date']);
+			unset($arrTempRow['time_completed_date']);
+			unset($arrTempRow['tonal_completed_date']);
 			unset($arrTempRow['status']);
+			unset($arrTempRow['pitch_status']);
+			unset($arrTempRow['time_status']);
+			unset($arrTempRow['tonal_status']);
 			$arrTemp[] = $arrTempRow;
 		}
 		
@@ -109,17 +121,6 @@ class Usertestresult extends CI_Controller {
 			}
 		}
 		//print_r($arrTemp); exit;
-		foreach ($arrTemp as $key => &$value) 
-		{
-			$intScore = $this->adminmodel->FetchUserResult($value['id']);
-
-			$value['score'] = $intScore;
-
-			$value['certile'] = $this->adminmodel->FetchCertileWRT($intScore, $value['age'], $value['gender']);
-		}
-
-		$arrHeaders[] = 'Score';
-		$arrHeaders[] = 'Certile';
 
 		$arrHeaders = array_unique($arrHeaders);
 		
