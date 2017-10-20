@@ -810,7 +810,7 @@ class Adminmodel extends CI_Model
 	
 	function fetch_subscores_status() {
 		
-		$query = "select subscore_check from time_subscore_checkbox where id= 1";
+		$query = "SELECT subscore_check FROM time_subscore_checkbox WHERE id=1";
 		
 		$objQuery = $this->db->query($query);
 

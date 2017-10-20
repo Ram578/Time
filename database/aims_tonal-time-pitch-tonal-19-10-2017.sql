@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 17, 2017 at 12:43 PM
+-- Generation Time: Oct 19, 2017 at 06:05 AM
 -- Server version: 5.6.15-log
 -- PHP Version: 5.4.24
 
@@ -33,6 +33,17 @@ CREATE TABLE IF NOT EXISTS `ci_sessions` (
   `data` blob NOT NULL,
   KEY `ci_sessions_timestamp` (`timestamp`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `ci_sessions`
+--
+
+INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
+('734406cfd59b3093c5e365e17eec8119509813ac', '127.0.0.1', 1508255433, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530383235353232303b456d706c6f79656549447c733a313a2232223b456d706c6f796565464e616d657c733a333a22646576223b456d706c6f7965654c4e616d657c733a343a2274657374223b456d706c6f796565526f6c657c733a353a2261646d696e223b),
+('28c984443e935f0854e96aa0c8446ba4dfad180e', '127.0.0.1', 1508255578, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530383235353537383b456d706c6f79656549447c733a313a2232223b456d706c6f796565464e616d657c733a333a22646576223b456d706c6f7965654c4e616d657c733a343a2274657374223b456d706c6f796565526f6c657c733a353a2261646d696e223b),
+('0125873271308c725bb48c56a928b93f36e5d24a', '127.0.0.1', 1508261231, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530383236313231383b456d706c6f79656549447c733a313a2232223b456d706c6f796565464e616d657c733a333a22646576223b456d706c6f7965654c4e616d657c733a343a2274657374223b456d706c6f796565526f6c657c733a353a2261646d696e223b);
+
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `employees`
@@ -350,7 +361,7 @@ CREATE TABLE IF NOT EXISTS `time_user_answers` (
   KEY `userid` (`userid`),
   KEY `questionid` (`questionid`),
   KEY `optionid` (`optionid`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -515,12 +526,15 @@ INSERT INTO `tonal_subscore_checkbox` (`id`, `subscore_check`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `tonal_user_answers` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `userid` int(11) NOT NULL,
   `questionid` int(11) NOT NULL,
   `optionid` int(11) NOT NULL,
-  `addeddate` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `addeddate` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `tonal_user_answers_ibfk_1` (`userid`),
+  KEY `tonal_user_answers_ibfk_2` (`questionid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -545,7 +559,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `tonal_status` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `filenumber` (`filenumber`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Constraints for dumped tables
@@ -557,11 +571,17 @@ CREATE TABLE IF NOT EXISTS `users` (
 ALTER TABLE `pitch_user_answers`
   ADD CONSTRAINT `pitch_user_answers_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `users` (`id`),
   ADD CONSTRAINT `pitch_user_answers_ibfk_2` FOREIGN KEY (`questionid`) REFERENCES `pitch_questions` (`id`);
-  
+
+--
+-- Constraints for table `time_user_answers`
+--
 ALTER TABLE `time_user_answers`
   ADD CONSTRAINT `time_user_answers_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `users` (`id`),
   ADD CONSTRAINT `time_user_answers_ibfk_2` FOREIGN KEY (`questionid`) REFERENCES `time_questions` (`id`);
-  
+
+--
+-- Constraints for table `tonal_user_answers`
+--
 ALTER TABLE `tonal_user_answers`
   ADD CONSTRAINT `tonal_user_answers_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `users` (`id`),
   ADD CONSTRAINT `tonal_user_answers_ibfk_2` FOREIGN KEY (`questionid`) REFERENCES `tonal_questions` (`id`);

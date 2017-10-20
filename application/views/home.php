@@ -13,7 +13,7 @@
 						<input type="text" id="sleFileNumber" placeholder="File Number" class="form-control" name="filenumber" value="103B-D-2017-" autocomplete="false" />
 					</div>
 					<div class="col_full form-group">
-						<button disabled="disabled" type="submit" id="RegisterBtn" class="btn btn-primary btn-block">Register</button>
+						<button disabled="disabled" type="submit" id="RegisterBtn" class="btn btn-primary btn-block">Login</button>
 					</div>
 				</form> <!-- /form -->
 				<!-- Registration Block ends here -->

@@ -36,6 +36,16 @@ class Frontendmodel extends CI_Model
 		return $array;	
 	}
 	
+	function fetch_subscores_status() {
+		
+		$query = "SELECT subscore_check FROM time_subscore_checkbox WHERE id=1";
+		
+		$objQuery = $this->db->query($query);
+
+		return $objQuery->row_array();
+		
+	}
+	
 	//Get the subscores data from time_subscores table
 	function fetch_subscores() 
 	{

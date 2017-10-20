@@ -12,8 +12,6 @@ class Tonaltest extends CI_Controller {
 		{
 			$this->load->model('frontendmodel');
 			
-			$this->load->model('adminmodel');
-
 			$arrData['Title'] = 'AIMS - Test';
 
 			$Header = $this->load->view('header', $arrData,true);
@@ -24,7 +22,7 @@ class Tonaltest extends CI_Controller {
 				
 			$arrData['subscores'] = $this->frontendmodel->fetch_subscores();
 			
-			$arrData['subscore_status'] = $this->adminmodel->fetch_subscores_status();
+			$arrData['subscore_status'] = $this->frontendmodel->fetch_subscores_status();
 			
 			$questions_result = $this->frontendmodel->FetchQuestions();
 			
