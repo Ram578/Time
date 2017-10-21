@@ -17,38 +17,22 @@
 					<!-- When the page loads the fourth screen will display this div -->
 					<div class="content" id="divs" style="display:none; height:100%;">
 						<div class="one" style="padding-top: 1em; padding-bottom:8em;">
-							 <div class="row" style="margin-top:10%;">
-								<div class="col-sm-4 col-md-offset-4 animate " id="demoa" style="width:3%;"></div>
-							 </div>
-							 <div class="row" style = "margin-top:30px;">
-								<div class="col-sm-4 col-md-offset-4 animate" id="demob" style="width:7%;"></div>
-							 </div>
-							 <div class="row" style = "margin-top:30px;">
-								<div class="col-sm-4 col-md-offset-4 animate" id ="democ" style=" width:13%;"></div>
-							 </div>
-							 <div class="row" style = "margin-top:30px;">
-								<div class="col-sm-4 col-md-offset-4 animate" id="demod" style="width:16%;"></div>
-							 </div>
-							 <div class="row" style = "margin-top:30px;">
-								<div class="col-sm-4 col-md-offset-4 animate" id="demoe" style="width:26%;"></div>
-							 </div>
+							<div class="row" style="margin-top:10%;">
+								<div class="col-xs-4 col-sm-4 col-md-4 col-xs-offset-4 col-sm-offset-4 col-md-offset-4 animate" id="demoa" style="width:3%;"></div>
+							</div>
+							<div class="row" style = "margin-top:30px;">
+								<div class="col-xs-4 col-sm-4 col-md-4 col-xs-offset-4 col-sm-offset-4 col-md-offset-4 animate" id="demob" style="width:7%;"></div>
+							</div>
+							<div class="row" style = "margin-top:30px;">
+								<div class="col-xs-4 col-sm-4 col-md-4 col-xs-offset-4 col-sm-offset-4 col-md-offset-4 animate" id ="democ" style=" width:13%;"></div>
+							</div>
+							<div class="row" style = "margin-top:30px;">
+								<div class="col-xs-4 col-sm-4 col-md-4 col-xs-offset-4 col-sm-offset-4 col-md-offset-4 animate" id="demod" style="width:16%;"></div>
+							</div>
+							<div class="row" style = "margin-top:30px;">
+								<div class="col-xs-4 col-sm-4 col-md-4 col-xs-offset-4 col-sm-offset-4 col-md-offset-4 animate" id="demoe" style="width:26%;"></div>
+							</div>
 						</div>
-						<!--<div class = "two">
-							<div class="row" style = "margin-top:15%;">
-								<div class="col-sm-4 col-md-offset-4" style="background-color:lightblue; width:24;height:35px;"></div>
-							  </div>
-							  <div class="row" style = "margin-top:35px;">
-								<div class="col-sm-4 col-md-offset-4" style="background-color:lightblue; width:17%; height:35px;"></div>
-							  </div>
-						</div>
-						<div class = "three">
-							<div class="row" style = "margin-top:15%;">
-								<div class="col-sm-4 col-md-offset-4" style="background-color:lightblue; width:24;height:35px;"></div>
-							 </div>
-							 <div class="row" style = "margin-top:35px;">
-								<div class="col-sm-4 col-md-offset-4" style="background-color:lightblue; width:17%; height:35px;"></div>
-							 </div>
-						</div>-->
 					</div>
 								<!-- Auido Play count list ends here -->
 							

@@ -14,6 +14,9 @@ html, body {
 	display: flex; -webkit-flex-align: center;  -ms-flex-align: center; -webkit-align-items: center; 
 	align-items: center; 
 }
+.container.welcome {
+	width: 80%;
+}
 .intro-wrapper .container {
 	position: relative; 
 }
@@ -74,9 +77,17 @@ html, body {
 .intro-wrapper .img-view {
 	margin:10px 0 0 0; 
 }
+.intro-screen-01 {
+	width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.intro-screen-01.col-md-offset-2 {
+    margin-left: 0;
+}
 .next-button, .blue-button {
     text-shadow: linear-gradient(#1b7323,#18a328);
-    padding: 30px 50px;
+    padding: 0;
     background-image:0 -1px 1px rgba(175, 49, 95, .9), 0 0 5px rgba(255, 255, 255, .8);
     color: #fff;
     font-size: 30px;
@@ -90,6 +101,12 @@ html, body {
     -moz-transition: background-color .2s ease-in-out, -moz-transform .1s ease-in-out;
     -o-transition: background-color .2s ease-in-out, -o-transform .1s ease-in-out;
     transition: background-color .2s ease-in-out, transform .1s ease-in-out;
+	height: 135px;
+    display: flex;
+    align-items: center;
+    width: 250px;
+    margin: 0 12px;
+    justify-content: center
 }
 .next-button:after, .blue-button:after {
     content: '';
@@ -302,7 +319,6 @@ span.score {
 	background-color:#bdd7ee; 
 	width: 100%; 
 	height: 80vh;
-	margin: -3px 0px 0px 2px;
 }
 .animate {
 	background-color:#5a9bd5;

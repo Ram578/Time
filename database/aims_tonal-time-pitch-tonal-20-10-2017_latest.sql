@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2017 at 06:05 AM
+-- Generation Time: Oct 20, 2017 at 03:15 PM
 -- Server version: 5.6.15-log
 -- PHP Version: 5.4.24
 
@@ -485,7 +485,7 @@ INSERT INTO `tonal_questions_order` (`id`, `question_order`, `type`) VALUES
 
 CREATE TABLE IF NOT EXISTS `tonal_subscores` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `questions` varchar(7) NOT NULL,
+  `level` int(3) NOT NULL,
   `score_range` varchar(15) NOT NULL,
   `subscore_status` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
@@ -495,10 +495,10 @@ CREATE TABLE IF NOT EXISTS `tonal_subscores` (
 -- Dumping data for table `tonal_subscores`
 --
 
-INSERT INTO `tonal_subscores` (`id`, `questions`, `score_range`, `subscore_status`) VALUES
-(1, '4', '1-3', 1),
-(2, '3', '1-3', 1),
-(3, '2', '1-4', 0);
+INSERT INTO `tonal_subscores` (`id`, `level`, `score_range`, `subscore_status`) VALUES
+(1, 4, '1-3', 1),
+(2, 3, '1-3', 1),
+(3, 2, '1-4', 0);
 
 -- --------------------------------------------------------
 
